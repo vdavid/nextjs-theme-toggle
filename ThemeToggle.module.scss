@@ -1,0 +1,94 @@
+.toggle {
+  --background-color: white;
+  --text-color: black;
+  --switch-background-color: black;
+  --dot-color: #d1d6ee;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none !important;
+  font-family: sans-serif;
+  transition: transform 0.3s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+
+  &:active {
+    --scale: 0.96;
+  }
+
+  label {
+    margin: 0 !important;
+    border-radius: 9px;
+    padding: 16px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  label span {
+    font-family: var(--header-font);
+    line-height: 22px;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-left: 12px;
+  }
+
+  /* Hide theme toggle button on small screens, it won’t change anything visible */
+  &.hideOnSmallScreens {
+    @media (max-width: 1065px) {
+      display: none;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked + label {
+    --offset: 18px;
+    --text-color: white;
+    --background-color: black;
+    --switch-background-color: #275efe;
+  }
+
+  &:checked + label > div::after {
+    content: '🌞';
+    right: auto;
+    left: 1px;
+  }
+}
+
+.switch-div {
+  position: relative;
+  vertical-align: top;
+  height: 22px;
+  width: 40px;
+  border-radius: 11px;
+  background: var(--switch-background-color);
+  transition: background-color 0.4s;
+
+  &::after {
+    content: '🌜';
+    display: block;
+    position: absolute;
+    right: 3px;
+    z-index: 8;
+    font-size: 12px;
+    line-height: 23px;
+  }
+}
+
+.dot {
+  background: var(--dot-color);
+  position: absolute;
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: -1px;
+  top: -1px;
+  transform: translateX(var(--offset, 0));
+  transition: transform 0.4s;
+}
