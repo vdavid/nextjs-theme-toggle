@@ -1,21 +1,36 @@
 {
   "name": "theme-toggle",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple React-based theme toggle component for Next.js projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy:styles",
+    "copy:styles": "copyfiles -u 1 \"src/**/*.scss\" \"src/**/*.scss.d.ts\" dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "next.js",
+    "theme",
+    "toggle",
+    "dark mode",
+    "light mode",
+    "dark theme",
+    "light theme",
+    "next-themes",
+    "react",
+    "switch"
+  ],
+  "author": "David Veszelovszki",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^18.15.5",
+    "react": "18.2.0"
+  },
+  "devDependencies": {
     "@types/react": "18.0.28",
-    "classnames": "^2.3.2",
-    "next-themes": "^0.2.1",
-    "react": "18.2.0",
+    "copyfiles": "^2.4.1",
+    "next": "13.2.4",
+    "react-dom": "^18.2.0",
     "typescript": "5.0.2"
   }
 }

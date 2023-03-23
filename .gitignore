@@ -1,2 +1,14 @@
-./node_modules
-tsconfig.tsbuildinfo
+# Dependencies
+/node_modules
+
+# Build artifacts
+/dist
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Log files
+*.log
+
+# Editor directories and files
+.idea
