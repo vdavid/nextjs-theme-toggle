@@ -23,6 +23,14 @@
   ],
   "author": "David Veszelovszki",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdavid/nextjs-theme-toggle.git"
+  },
+  "homepage": "https://github.com/vdavid/nextjs-theme-toggle",
+  "bugs": {
+    "url": "https://github.com/vdavid/nextjs-theme-toggle/issues"
+  },
   "dependencies": {
     "react": "18.2.0"
   },

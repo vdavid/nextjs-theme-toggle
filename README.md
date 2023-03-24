@@ -1,6 +1,8 @@
-# Theme Toggle
+# Next.js Theme Toggle
 
-A simple, customizable dark mode toggle component for Next.js projects using next-themes.
+A simple, customizable theme toggle switch for Next.js projects using a theme provider such as [next-themes](https://github.com/pacocoursey/next-themes).
+
+[View on GitHub](https://github.com/vdavid/nextjs-theme-toggle)
 
 ## Features
 
