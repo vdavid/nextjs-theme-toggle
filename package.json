@@ -1,5 +1,5 @@
 {
-  "name": "theme-toggle",
+  "name": "nextjs-theme-toggle",
   "version": "1.0.0",
   "description": "A simple React-based theme toggle component for Next.js projects",
   "main": "dist/index.js",
